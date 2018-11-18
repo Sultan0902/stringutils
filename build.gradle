@@ -26,6 +26,16 @@ android {
 
 }
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -40,3 +50,32 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    bintrayRepo = 'stringutils'
+    bintrayName = 'stringutils'
+
+    publishedGroupId = 'com.sultan.utils'
+    libraryName = 'Stringutils'
+    artifact = 'stringutils'
+
+    libraryDescription = 'StringUtil is a utility library which is useful in any android application'
+
+    siteUrl = 'https://github.com/Sultan0902/stringutils'
+    gitUrl = 'https://github.com/Sultan0902/stringutils.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'sultan0902'
+    developerName = 'Sultan Ahmed'
+    developerEmail = 'sultan_anees@yahoo.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'LINK_TO_SCRIPT'
