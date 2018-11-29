@@ -5,6 +5,9 @@ StringUtil is commonly used library for android applications.
 It contains major string manipulation functions which allows android
 developers to perform string manipulation operation in an easy and simple manner.
 
+Latest Version : 1.0.0
+--------------------------------
+
 Include StringUtils using Gradle
 --------------------------------
 
